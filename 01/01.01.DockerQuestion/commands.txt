@@ -1,0 +1,17 @@
+# Run the docker image
+docker run -it --rm -d -p 8080:80 --name my-container my-image:v0.1
+
+# Verify Operation
+curl localhost:8080
+
+# List all images
+docker ps -a
+
+# Stop the Container
+docker container stop my-container
+
+# Delete the Image
+docker image rm my-image:v0.1
+
+# Prune all dangling images
+docker image prune -a
